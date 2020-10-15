@@ -1,0 +1,18 @@
+# How to run the Website (WebApp/System)
+
+## Please ensure you have installed the following:
+- Python 3 : https://www.python.org/downloads/
+- NodeJS : https://nodejs.org/en/download/
+
+Verify this by running the following in your terminal/ CMD separately:
+
+    python3 --version
+
+    node --version
+
+
+## Then in the project's/code's directory run the following command: ( Using terminal / CMD )
+
+    python3 setup.py
+
+In case you get any erros, and you did as said above, restart your computer and try again.

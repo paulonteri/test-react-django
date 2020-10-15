@@ -1,0 +1,77 @@
+{
+    "name": "shulesuite-app",
+    "version": "0.1.0",
+    "description": "Shule Suite Web App",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "antd": "^4.1.2",
+        "axios": "^0.19.1",
+        "chart.js": "^2.9.3",
+        "install": "^0.13.0",
+        "moment": "^2.24.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-alert": "^6.0.0",
+        "react-alert-template-basic": "^1.0.0",
+        "react-chartjs-2": "^2.9.0",
+        "react-dom": "^16.12.0",
+        "react-highlight-words": "^0.16.0",
+        "react-infinite-scroller": "^1.2.4",
+        "react-loader-spinner": "^3.1.5",
+        "react-redux": "^7.1.3",
+        "react-router-dom": "^5.1.2",
+        "react-scripts": "3.4.0",
+        "react-transition-group": "^4.3.0",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0",
+        "styled-components": "^5.0.1",
+        "typescript": "^3.7.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "analyze": "source-map-explorer 'build/static/js/*.js'",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.4",
+        "@babel/preset-env": "^7.8.4",
+        "@babel/preset-react": "^7.8.3",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-import": "^1.13.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "css-loader": "^3.4.2",
+        "less": "^3.10.3",
+        "less-loader": "^5.0.0",
+        "prettier": "1.19.1",
+        "source-map-explorer": "^2.4.2",
+        "style-loader": "^1.1.3"
+    },
+    "prettier": {
+        "tabWidth": 4
+    },
+    "author": "Paul Onteri - Lead Software Engineer, ShuleSuite.com",
+    "license": "Proprietary",
+    "homepage": "https://shulesuite.com/"
+}
