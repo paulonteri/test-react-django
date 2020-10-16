@@ -15,4 +15,21 @@ Verify this by running the following in your terminal/ CMD separately:
 
     python3 setup.py
 
-In case you get any erros, and you did as said above, restart your computer and try again.
+## In case you get any errors, and you did as said above, restart your computer and try again.
+
+## Other useful commands:
+
+# run application after setup:
+    python3 run_application.py
+# run frontend only:
+    python3 run_frontend.py
+# run backend only:
+    python3 run_backend.py
+
+# setup backend:
+    python3 setup_backend.py
+# setup frontend:
+    python3 setup_frontend.py
+
+
+

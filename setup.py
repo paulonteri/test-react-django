@@ -1,61 +1,50 @@
 #!/usr/bin/env python3
 import os
-print("|||||||||||||  APPLICATION SETUP ||||||||||||| \n")
+import subprocess
+print("|||||||||||||  SETUP ||||||||||||| \n")
+
+# verify python
+ver_py = subprocess.check_output(["python3", "--version"])
+if not ("python 3" in (str(ver_py)).lower()):
+    raise Exception("Please intall Python 3 !!!!!!!!!")
+try:
+    subprocess.check_call(["pip3", "install", "django"])
+except Exception as e:
+    print("\n \n \n \n")
+    print("CANNOT INSTALL PYTHON PACKAGES.....")
+    print("It is very likely that this is not a problem with the setup...")
+    print("This script cannot run without the permission to install packages...")
+    print("Please fix the permissions first...")
+    print("\n")
+    raise e
+
+ver_js = subprocess.check_output(["node", "--version"])
+if not ("v" in (str(ver_js)).lower()) or len(ver_js) < 5 or len(ver_js) > 20:
+    raise Exception("Please intall Node !!!!!!!!!")
+subprocess.check_call(["node", "test.js"])
 
 
 print("Setup working... \n")
 print(os.getcwd())
 print(os.listdir(os.curdir))
 print("\n")
+os.system("sleep 2")
 
-# Install Python dependencies
-print("\n")
-print("\n")
-print("Intalling Python dependencies... \n")
-os.chdir('backend')
+
+print("||||||||||||| BACKEND  ||||||||||||| \n")
 print(os.getcwd())
 print(os.listdir(os.curdir))
-os.system("pip install -r requirements.txt")
+subprocess.check_call(["python3", "setup_backend.py"])
+os.system("sleep 4")
 
-# Install Python dependencies
-print("\n")
-print("\n")
-print("Creating database and making migrations... \n")
-os.system("python3 manage.py migrate")
-
-
-# setup frontend
-print("\n")
-print("\n")
-print("SETTING UP FRONTEND... \n")
-os.chdir('../frontend')
+print("|||||||||||||  FRONTEND  ||||||||||||| \n")
 print(os.getcwd())
 print(os.listdir(os.curdir))
+subprocess.check_call(["python3", "setup_frontend.py"])
+os.system("sleep 4")
 
-print("\n")
-print("\n")
-print("Installing frontend dependencies")
-os.system("npm install")
-
-
-# Running Backend
-print("\n")
-print("\n")
-print("Running Backend... \n")
-os.chdir('../backend')
-print("\n")
-print("\n")
-os.system("python3 manage.py runserver  &")
-os.system("sleep 7")
+# Running Application
+print("||||||||||||| RUN  ||||||||||||| \n")
 print(os.getcwd())
 print(os.listdir(os.curdir))
-
-# Running Frontend
-print("\n")
-print("\n")
-print("Running Frontend... \n")
-os.chdir('../frontend')
-print("\n")
-print("\n")
-print("Website starting... \n")
-os.system("npm start")
+subprocess.check_call(["python3", "run_application.py"])
